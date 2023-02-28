@@ -18,7 +18,7 @@ h1 {
     color: rgb(44, 44, 44);
 }
 
-h2, h3, h4, li, td, p, dt, dd, a{
+h2, h3, h4, li, td, p, dt, dd, a, span{
     color: rgb(44, 44, 44);
     font-family: 'BookkMyungjo-Bd';
 
@@ -66,6 +66,17 @@ ul {
     width: 20%;
 
 }
+
+.nav >.nav-menu >li >a {
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.nav >.nav-menu >li:hover >a {
+    background-color: #fec774cc;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
 .nav >.nav-mobile {
     display: none;
 }
@@ -86,18 +97,19 @@ ul {
 
 .section1-wrap >.section1-title {
     position: absolute;
-    top: 800px;
+    bottom: 15%;
     right: 5%;
 }
 
 .section1-wrap >.section1-title >h1 {
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .section1-wrap >.section1-title >h3 {
     color: white;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 /* section1 행사 이름 끝 */
 
@@ -110,31 +122,32 @@ ul {
     background: linear-gradient(white 20%, #fec774cc);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-content: center;
 }
 
 .section2-intro >.intro-title h2 {
-    font-size: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .section2-intro >.intro-title h1 {
-    font-size: 7rem;
+    font-size: 4rem;
 }
 
 .section2-intro >.intro-title h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: gray;
     font-weight: lighter;
 }
 
 .section2-intro >.intro-descript >table {
-    width:550px;
-    font-size: 1.5rem;
+    width:380px;
+    font-size: 1rem;
     text-align: left;
     border-collapse: separate;
-    border-spacing: 20px 10px;
+    border-spacing: 10px 10px;
 }
 
 
@@ -145,7 +158,7 @@ ul {
 
 .section2-intro >.intro-descript >table td:first-child {
     background-color: white;
-    padding: 10px 30px;
+    padding: 10px 25px;
     text-align: center;
     font-weight: bold;
 }
@@ -172,17 +185,23 @@ ul {
 }
 
 .section3-gallery >.gallery-title >a {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     background-color: #fec774;
     box-sizing: border-box;
     border-radius: 40px;
-    width: 100px;
-    height: 35px;
+    width: 80px;
+    height: 30px;
     text-align: center;
+    transition: all 0.3s;
+}
+
+.section3-gallery >.gallery-title >a:hover {
+    background-color: #79b1d2;
+    transition: all 0.3s;
 }
 
 .section3-gallery >.gallery-title >a >p {
-    padding-top: 10px;
+    padding-top: 9px;
 }
 
 .section3-gallery >.gallery-wrap {
@@ -193,6 +212,9 @@ ul {
 
 .section3-gallery >.gallery-wrap >.button-skip-left {
     background-image: url(../img/circle-arrow-left-solid.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 50px;
     height: 50px;
 }
@@ -204,24 +226,213 @@ ul {
 }
 
 .section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     background-color: rgb(211, 211, 211);
     border-radius: 40px;
 }
 
 .section3-gallery >.gallery-wrap >.button-skip-right {
     background-image: url(../img/circle-arrow-right-solid.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 50px;
     height: 50px;
 }
 
-    /* .gallery-board 이미지 삽입, 수정*/ 
-    .section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board:nth-child(1) .img {
-        background-image: url(../img/plum-blossom-7090274_1920.jpg);
-        background-size: cover;
-        background-position: center;
-        width: 250px;
-        height: 250px;
-    }
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board >.img-wrap {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board >.img-wrap >.img {
+    background-size: cover;
+    background-position: center;
+    width: 220px;
+    height: 220px;
+    transition: all 0.3s;
+
+}
+/* .gallery-board:hover 상태 scale 변화 애니메이션 */
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board:hover >.img-wrap >.img {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+/* .gallery-board 이미지 삽입, 수정*/ 
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board:nth-child(1) .img {
+    background-image: url(../img/plum-blossom-7090274_1920.jpg);
+}
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board:nth-child(2) .img {
+    background-image: url(../img/flowers-7098849_1920.jpg);
+}
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board:nth-child(3) .img {
+    background-image: url(../img/flowers-7113013_1920.jpg);
+}
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board:nth-child(4) .img {
+    background-image: url(../img/plum-blossom-7081403_1920.jpg);
+}
+
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board >.text-wrap {
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board >.text-wrap >p {
+    font-size: 0.9rem;
+}
+/* section3 행사 이미지 끝 */
+
+
+
+/* section4 행사 소식 시작 */
+.section4-news {
+    width: 80%;
+    height: 400px;
+}
+
+.section4-news >.news-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section4-news >.news-title >h1 {
+    font-size: 3rem;
+}
+
+.section4-news >.news-title >a {
+    font-size: 0.8rem;
+    background-color: #fec774;
+    box-sizing: border-box;
+    border-radius: 40px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.section4-news >.news-title >a:hover {
+    background-color: #79b1d2;
+    transition: all 0.3s;
+}
+
+.section4-news >.news-title >a >p {
+    padding-top: 9px;
+}
+
+.section4-news >ul {
+    width: 85%;
+}
+
+.section4-news >ul >li {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.section4-news >ul >li:last-child {
+    border-top: none;
+}
+
+
+.section4-news >ul >li >a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.section4-news >ul >li >a >.news-date {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section4-news >ul >li >a >.news-date> dt {
+    font-size: 1.7rem;
+    color: #2385bd;
+}
+
+.section4-news >ul >li >a >.news-date> dd {
+    font-size: 1rem;
+    padding-top: 5px;
+}
+
+.section4-news >ul >li >a >.news-content {
+    width: 55%;
+    font-size: 1.15rem;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.section4-news >ul >li >a:hover >.news-content {
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+.section4-news >ul >li >a .news-arrow {
+    color: #2385bd;
+    width: 33px;
+    visibility: hidden;
+}
+
+.section4-news >ul >li >a:hover .news-arrow {
+    visibility: visible;
+}
+/* section4 행사 소식 끝 */
+
+
+
+/* footer 시작 */
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(211, 211, 211);
+}
+
+
+.footer >.footer-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 32px 0;
+    color: gray;
+    font-size: 0.85rem;
+}
+
+.footer >.footer-content span {
+    border-right: 2px solid gray;
+    padding-left:12px;
+    padding-right: 15px;
+}
+
+.footer >.footer-content >.footer-info >span:first-child {
+    padding-left:0;
+
+}
+
+.footer >.footer-content >.footer-info >span:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.footer >.footer-content >.footer-contact >span:first-child {
+    padding-left:0;
+
+}
+
+.footer >.footer-content >.footer-contact >span:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.footer >.footer-content >.footer-copy {}
 
