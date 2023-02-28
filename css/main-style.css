@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'HSBombaram21-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSBombaram21-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+h1 {
+    font-family: 'HSBombaram21-Regular';
+    color: rgb(44, 44, 44);
+}
+
+h2, h3, h4, li, td, p, dt, dd, a{
+    color: rgb(44, 44, 44);
+    font-family: 'BookkMyungjo-Bd';
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+/* header */
+.header {
+    z-index: 100;
+    background-color: #ffffffcc;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+}
+
+/* 고정 nav 시작 */
+.nav {
+    max-width: 97%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav >a {
+    width: 45%;
+}
+.nav >a >.nav-title {
+    font-size: 2rem;
+}
+
+.nav >.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+
+}
+.nav >.nav-mobile {
+    display: none;
+}
+/* 고정 nav 끝 */
+
+
+
+/* section1 행사 이름 시작 */
+.section1-wrap {
+    background-image: url(../img/flowers-7813838.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+    text-align: right;
+}
+
+.section1-wrap >.section1-title {
+    position: absolute;
+    top: 800px;
+    right: 5%;
+}
+
+.section1-wrap >.section1-title >h1 {
+    color: white;
+    font-size: 5rem;
+}
+
+.section1-wrap >.section1-title >h3 {
+    color: white;
+    font-size: 2rem;
+}
+/* section1 행사 이름 끝 */
+
+
+
+/* section2 행사 설명 시작 */
+.section2-intro {
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(white 20%, #fec774cc);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.section2-intro >.intro-title h2 {
+    font-size: 4rem;
+}
+
+.section2-intro >.intro-title h1 {
+    font-size: 7rem;
+}
+
+.section2-intro >.intro-title h3 {
+    font-size: 1.3rem;
+    color: gray;
+    font-weight: lighter;
+}
+
+.section2-intro >.intro-descript >table {
+    width:550px;
+    font-size: 1.5rem;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 20px 10px;
+}
+
+
+.section2-intro >.intro-descript >table td {
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.section2-intro >.intro-descript >table td:first-child {
+    background-color: white;
+    padding: 10px 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section2-intro >.intro-descript >table td:last-child {
+    padding-left: 30px;
+}
+/* section2 행사 설명 끝 */
+
+
+
+/* section3 행사 이미지 시작 */
+.section3-gallery {
+    width: 80%;
+}
+
+.section3-gallery >.gallery-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section3-gallery >.gallery-title >h1 {
+    font-size: 3rem;
+}
+
+.section3-gallery >.gallery-title >a {
+    font-size: 1.1rem;
+    background-color: #fec774;
+    box-sizing: border-box;
+    border-radius: 40px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+}
+
+.section3-gallery >.gallery-title >a >p {
+    padding-top: 10px;
+}
+
+.section3-gallery >.gallery-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section3-gallery >.gallery-wrap >.button-skip-left {
+    background-image: url(../img/circle-arrow-left-solid.svg);
+    width: 50px;
+    height: 50px;
+}
+
+.section3-gallery >.gallery-wrap >.gallery-board-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 40px;
+}
+
+.section3-gallery >.gallery-wrap >.button-skip-right {
+    background-image: url(../img/circle-arrow-right-solid.svg);
+    width: 50px;
+    height: 50px;
+}
+
+    /* .gallery-board 이미지 삽입, 수정*/ 
+    .section3-gallery >.gallery-wrap >.gallery-board-wrap >.gallery-board:nth-child(1) .img {
+        background-image: url(../img/plum-blossom-7090274_1920.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 250px;
+        height: 250px;
+    }
+
